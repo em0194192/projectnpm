@@ -13,18 +13,19 @@
     <img id="pokePic1" src="#" alt="">
 
     <script>
+        //API Call 
         let response = axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
         response.then((response) => {
             
+            //Console Log Response
             console.log(response)
 
+            //Change Img Src to photo url supplied by API Call Data
             document.getElementById('pokePic1').src = response.data.sprites.front_default
         })
             .catch((error) => {
                 console.log(error)
             })
-
-
     </script>
 </body>
 
